@@ -1,6 +1,6 @@
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon", "..."];
 
-function addExcitement (theWordArray) {
+function addExcitement (theWordArray, punctuation) {
     let buildMeUp = "";
 
     for (let i = 0; i <= theWordArray.length; i++) {
@@ -10,7 +10,7 @@ function addExcitement (theWordArray) {
       if (sentence[i] == null){
           return;
       } else if ((i+1) % 3 == 0 ) {
-          buildMeUp += "! ";
+          buildMeUp += punctuation + " ";
       };
 
       console.log(buildMeUp);
@@ -28,4 +28,4 @@ function addExcitement (theWordArray) {
 
 }
 
-addExcitement(sentence)
+addExcitement(sentence, "?")
